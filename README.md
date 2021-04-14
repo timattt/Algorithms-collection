@@ -1,10 +1,10 @@
 # Безудержные-алгоритмы
 Вот несколько полезных алгоритмов, реализованных на Java.
 
-Теорминимум можно найти [здесь] (http://e-maxx.ru/algo/)
+Теорминимум можно найти [здесь](http://e-maxx.ru/algo/)
 
 ## English version
-You can find the English version of the readme [here](https://raw.githubusercontent.com/timattt/Rampant-algorithms/master/README_EN.md)
+You can find the English version of the readme [here](https://github.com/timattt/Rampant-algorithms/blob/master/README_EN.md)
 
 ## Алгоритмы
 ### Динамика

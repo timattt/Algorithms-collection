@@ -1,4 +1,4 @@
-# Rampant-algorithms
+# Algorithms collection
 Here are some useful algorithms implemented in Java.
 
 Theoretical minimum can be found [here](http://e-maxx.ru/algo/)

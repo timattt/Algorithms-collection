@@ -1,116 +1,95 @@
-# Rampant-algorithms
-Here are some useful algorithms implemented in Java.
+# Безудержные-алгоритмы
+Вот несколько полезных алгоритмов, реализованных на Java.
 
-Theoretical minimum can be found [here](http://e-maxx.ru/algo/)
+Теорминимум можно найти [здесь] (http://e-maxx.ru/algo/)
 
-## Algorithms
-### Dynamics
-* Find biggest zero sub matrix   
-You are given an n-by-m matrix a. 
-It is required to find in it such a submatrix consisting only of zeros, and among all such - 
-having the largest area.
-### GCD
-* Normal GCD   
-You are given two non-negative integers a and b. It is required to find their greatest common divisor.
-* Advanced GCD   
-While the "normal" Euclidean algorithm simply finds the greatest common divisor of two numbers a and b,
-the extended Euclidean algorithm finds, in addition to the GCD, the coefficients x and y such that:
+## English version
+You can find the English version of the readme [here](https://raw.githubusercontent.com/timattt/Rampant-algorithms/master/README_EN.md)
+
+## Алгоритмы
+### Динамика
+* Найти самую большую нулевую подматрицу
+Вам дана матрица размера n на m.
+Требуется найти в ней такую ​​подматрицу, состоящую только из нулей, и среди всего такого -
+имеющий самую большую площадь.
+### НОД
+* Нормальный НОД
+Вам даны два неотрицательных целых числа a и b. Требуется найти их наибольший общий делитель.
+* Расширенный НОД
+В то время как «нормальный» алгоритм Евклида просто находит наибольший общий делитель двух чисел a и b,
+расширенный алгоритм Евклида находит, помимо НОД, такие коэффициенты x и y, что:
 ```
-a * x + b * y = gcd(a, b);
+a * x + b * y = gcd (a, b);
 ```
-### Graph
-* Finding Euler path   
-An Euler path is a path in a graph that goes through all of its edges. An Euler cycle is an Euler path, which is a cycle.
-The goal is to find an Euler path in an undirected multigraph with loops.
-* Checking the graph for acyclicity and finding the cycle   
-Let a directed or undirected graph be given without loops and multiple edges. 
-It is required to check whether it is acyclic, and if not, then find any cycle.
-* Dijkstra's algorithm   
-You are given a directed or undirected weighted graph with n vertices and m edges. 
-The weights of all edges are non-negative. Some starting vertex s is indicated. 
-It is required to find the lengths of the shortest paths from vertex s to all other vertices, 
-and also provide a way to derive the shortest paths themselves.
-* Search for components of strong connectivity   
-A strongly connected component in a directed graph is a (maximal by inclusion) 
-subset of vertices such that any two vertices of this subset are reachable from each other
-The algorithm described below selects all strongly connected components in a given graph.
-It will not be difficult to construct a condensation graph from them.
-* Topological sort   
-You are given a directed graph with n vertices and m edges. 
-It is required to renumber its vertices in such a way that each edge leads from 
-a vertex with a lower number to a vertex with a larger one.
-* MST Prim   
-You are given a weighted undirected graph G with n vertices and m edges. 
-It is required to find a subtree of this graph that would connect all its vertices, 
-and at the same time have the smallest possible weight.
-* Search for articulation points.   
-Let a connected undirected graph be given. 
-A point of articulation is a vertex, the removal of which makes the graph disconnected.
-* Find bridges   
-Let an undirected graph be given. 
-A bridge is an edge whose removal makes the graph disconnected 
-(or, more precisely, increases the number of connected components). Find all bridges in a given graph.
-* MST Kruskal   
-A weighted undirected graph is given. 
-It is required to find a subtree of this graph that would connect all its vertices, 
-and at the same time have the smallest weight (i.e., the sum of the edge weights) of all possible ones.
-* DFS   
-This is one of the main graph algorithms.
-As a result of depth-first search, the lexicographically first path in the graph is found.
-* BFS   
-Breadth First Search is one of the main algorithms for graphs.
-Breadth First Search finds the shortest path in the unweighted graph, i.e. path containing the least number of edges.
-* LCA   
-Let a tree G be given. The input receives requests of the form (V1, V2), 
-for each request it is required to find their least common ancestor, i.e. 
-the vertex V, which lies on the path from the root to V1, on the path from 
-the root to V2, and of all such vertices, the lowest one should be selected.
-### Hafman   
-The Huffman algorithm is an algorithm for optimal prefix coding of the alphabet with minimal redundancy.
-### Search
-* Binary search   
-Binary search is a classic algorithm for finding
-an element in a sorted array, using the array splitting in half.
-* Ternary search   
-Let a function f (x) be given that is unimodal on some segment [l; r]. 
-Unimodality refers to one of two options. First: the function first strictly increases, 
-then reaches a maximum (at one point or an entire segment), then strictly decreases. 
-The second variant, symmetric: the function first decreases, decreases, reaches a minimum,
-and increases. In the future, we will consider the first option, the second will be absolutely 
-symmetrical to it.
-It is required to find the maximum of the function f (x) on the segment [l; r].
-### Simpson rule
-It is required to calculate the value of a definite integral.
-### Z-function
-Let a string s of length n be given. 
-Then the Z-function of this string is an array of length n, the i-th element of which is equal 
-to the largest number of characters, starting from position i, 
-that match the first characters of string s.
-### Disjoint set union
-This data structure provides the following capabilities. 
-Initially, there are several elements, each of which is in a separate (its own) set. 
-In one operation, you can combine any two sets, and you can also query which set the 
-specified element is currently in. Also, in the classic version,
-another operation is introduced - the creation of a new element, which is placed in a separate set.
-### Segments tree
-A segment tree is a data structure that allows you to efficiently 
-(i.e., for asymptotics O (log n) implement operations of the following form: 
-finding the sum or minimum of array elements in a given segment, while additionally 
-changing the array elements is possible: as changing the value of one element and changing 
-elements on the whole array subsegment.
-### Smart stack and queue
-Here we will consider three tasks: modifying the stack with the addition of finding the 
-smallest element in O (1), similarly modifying the queue, and also applying them to the 
-problem of finding the minimum in all subsegments of a fixed length of a given array in O (N).
-### SQRT decomposition
-Sqrt decomposition is a method or data structure that allows you to perform some typical 
-operations (summing the elements of a subarray, finding the minimum / maximum, etc.) 
-in O (sqrt n), which is much faster than O (n) for a trivial algorithm.
-### Suffics automaton
-A suffix automaton (or directed acyclic word graph) is a powerful data structure that 
-allows you to solve many string problems.
-### Trie
-Trie is a data structure for storing a set of strings, which is a suspended tree with symbols on its edges. 
-Strings are obtained by sequential writing of all characters stored on the edges between the boron root 
-and the terminal vertex. The size of the bur is linearly dependent on the sum of the lengths of all strings, 
-and the search in the bur takes time proportional to the length of the sample.
+### Графы
+* Нахождение пути Эйлера
+Путь Эйлера - это путь в графе, который проходит через все его ребра. Цикл Эйлера - это путь Эйлера, который является циклом.
+Цель состоит в том, чтобы найти путь Эйлера в неориентированном мультиграфе с петлями.
+* Проверка графа на ацикличность и поиск цикла
+Пусть задан ориентированный или неориентированный граф без петель и кратных ребер.
+Требуется проверить, ацикличен ли он, а если нет, то найти какой-нибудь цикл.
+* Алгоритм Дейкстры
+Вам дан ориентированный или неориентированный взвешенный граф с n вершинами и m ребрами.
+Веса всех ребер неотрицательны. Указывается некоторая начальная вершина s.
+Требуется найти длины кратчайших путей от вершины s до всех остальных вершин,
+а также предоставить способ самому вывести кратчайшие пути.
+* Поиск компонентов сильной связи
+Компонента сильной связности в ориентированном графе - это (максимальная по включению)
+подмножество вершин такое, что любые две вершины этого подмножества достижимы друг от друга
+Описанный ниже алгоритм выбирает все сильно связанные компоненты в данном графе.
+Построить из них конденсационный граф не составит труда.
+* Топологическая сортировка
+Вам дан ориентированный граф с n вершинами и m ребрами.
+Требуется перенумеровать его вершины таким образом, чтобы каждое ребро выходило из
+вершина с меньшим номером к вершине с большим.
+* Посик остовного дерева по алгоритму Прима   
+Вам дан взвешенный неориентированный граф G с n вершинами и m ребрами.
+Требуется найти поддерево этого графа, которое бы соединяло все его вершины,
+и при этом иметь минимально возможный вес.
+* Поиск точек сочленения.
+Пусть дан связный неориентированный граф.
+Точка сочленения - это вершина, удаление которой делает граф несвязным.
+* Найдите мосты
+Пусть дан неориентированный граф.
+Мост - это ребро, удаление которого делает граф несвязным.
+(точнее, увеличивает количество связанных компонент). Найдите все мосты в заданном графе.
+* Посик остовного дерева по алгоритму Крускалла
+Дан взвешенный неориентированный граф.
+Требуется найти поддерево этого графа, которое бы соединяло все его вершины,
+и в то же время иметь наименьший вес (т.е. сумму весов ребер) из всех возможных.
+* DFS
+Это один из основных алгоритмов графа.
+В результате поиска в глубину найден лексикографически первый путь в графе.
+* BFS
+Поиск в ширину - один из основных алгоритмов построения графов.
+Поиск в ширину находит кратчайший путь в невзвешенном графе, то есть путь, содержащий наименьшее количество ребер.
+* LCA
+Пусть дано дерево G. На вход поступают запросы вида (V1, V2),
+для каждого запроса требуется найти их наименее общего предка, т.е.
+вершина V, лежащая на пути от корня до V1, на пути от
+корень к V2, и из всех таких вершин следует выбрать самую низкую.
+### Архививрование по Хафману
+Алгоритм Хаффмана - это алгоритм оптимального префиксного кодирования алфавита с минимальной избыточностью.
+### Поиск
+* Бинарный поиск
+Бинарный поиск - классический алгоритм поиска
+элемент в отсортированном массиве, используя разделение массива пополам.
+* Тернарный поиск
+Пусть дана функция f (x), унимодальная на некотором отрезке [l; р].
+Унимодальность относится к одному из двух вариантов. Во-первых: функция сначала строго возрастает,
+затем достигает максимума (в одной точке или на всем отрезке), затем строго убывает.
+Второй вариант, симметричный: функция сначала убывает, убывает, достигает минимума,
+и увеличивается. В дальнейшем рассмотрим первый вариант, второй будет абсолютно
+симметрично ему.
+Требуется найти максимум функции f (x) на отрезке [l; р].
+### Правило Симпсона
+Требуется вычислить значение определенного интеграла.
+### Z-функция
+Пусть дана строка s длины n.
+Тогда Z-функция этой строки представляет собой массив длины n, i-й элемент которого равен
+до наибольшего количества символов, начиная с позиции i,
+которые соответствуют первым символам строки s.
+### Систему непересекающихся множеств
+Эта структура данных предоставляет следующие возможности.
+Изначально есть несколько элементов, каждый из которых находится в отдельном (своем) наборе.
+За одну операцию можно расчесать

@@ -92,24 +92,24 @@ Initially, there are several elements, each of which is in a separate (its own) 
 In one operation, you can combine any two sets, and you can also query which set the 
 specified element is currently in. Also, in the classic version,
 another operation is introduced - the creation of a new element, which is placed in a separate set.
-# Segments tree
+### Segments tree
 A segment tree is a data structure that allows you to efficiently 
 (i.e., for asymptotics O (log n) implement operations of the following form: 
 finding the sum or minimum of array elements in a given segment, while additionally 
 changing the array elements is possible: as changing the value of one element and changing 
 elements on the whole array subsegment.
-# Smart stack and queue
+### Smart stack and queue
 Here we will consider three tasks: modifying the stack with the addition of finding the 
 smallest element in O (1), similarly modifying the queue, and also applying them to the 
 problem of finding the minimum in all subsegments of a fixed length of a given array in O (N).
-# SQRT decomposition
+### SQRT decomposition
 Sqrt decomposition is a method or data structure that allows you to perform some typical 
 operations (summing the elements of a subarray, finding the minimum / maximum, etc.) 
 in O (sqrt n), which is much faster than O (n) for a trivial algorithm.
-# Suffics automaton
+### Suffics automaton
 A suffix automaton (or directed acyclic word graph) is a powerful data structure that 
 allows you to solve many string problems.
-# Trie
+### Trie
 Trie is a data structure for storing a set of strings, which is a suspended tree with symbols on its edges. 
 Strings are obtained by sequential writing of all characters stored on the edges between the boron root 
 and the terminal vertex. The size of the bur is linearly dependent on the sum of the lengths of all strings, 
